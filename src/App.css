@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  background-color: #EBEFF8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navBar {
+  height: 100px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navBar ul {
+  width: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 10px;
+  list-style-type: none; /* Remove bullets */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navBar ul li a{
+  color: black;
+}
+
+.header {
+  display: flex;
+
+}
+
+.navBar ul {
+  flex-direction: row;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.flightBarItem {
+  padding: 5px;
+  width: 100%;
+  margin: 0 5px;
+  aspect-ratio: 1.33;
+  border: 10px solid #F3F6FD;
+  border-radius: 10px;
+  background-color: #F3F6FD;
+  display: grid;
+  font-size: small;
+  grid-area: content;
+  position: relative;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #6A69A5;
+}
+
+.topright {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #6A69A5;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
