@@ -1,6 +1,7 @@
 import FlightBar from './FlightBar';
 import HeaderComponent from './HeaderComponent'
 import BasicSelect from './BasicSelect';
+import TableComponent from './TableComponent';
 
 const sales = [
     {
@@ -19,7 +20,7 @@ const MainComponent = () => {
     return(
         <div>
             <div className='container' style={{
-                    display: 'grid',
+                    display: 'flex',
                     height: "100vh",
                     flexDirection: 'column',
                     justifyContent: 'space-between'
@@ -27,6 +28,7 @@ const MainComponent = () => {
                 <HeaderComponent />
                 <FlightBar />    
                 <div style={{
+                    width: "800px",
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'space-between'
@@ -36,12 +38,8 @@ const MainComponent = () => {
                 <BasicSelect data={sales} name="Средняя доходная ставка"/>
                 </div>
                 <BasicSelect data={sales} name="Изменения с рейсом"/>
-                <div>
-
-                </div>
+                <TableComponent />
             </div>
-            
-            
         </div>
     )
 }

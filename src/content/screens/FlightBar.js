@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import { styled, alpha } from "@mui/material/styles";
-
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
 import SearchIcon from "@mui/icons-material/Search";
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import FlightLandRoundedIcon from '@mui/icons-material/FlightLandRounded';
@@ -31,6 +25,31 @@ const months = {
 }
 
 const flights = [
+    {
+        id: 1,
+        date: {
+            day: 22,
+            month: 4,
+        },
+        number: "77-717",
+        from: {
+            place: "YKT",
+            time: {
+                hour: 12,
+                minutes: 50
+            }
+        },
+        to: {
+            place: "MSC",
+            time: {
+                hour: 11,
+                minutes: 40
+            }
+        },
+        typeAC: "СУ",
+        status: "Открыт",
+        rule: "ASR"
+    },
     {
         id: 0,
         date: {
@@ -55,7 +74,8 @@ const flights = [
         typeAC: "СУ",
         status: "Открыт",
         rule: "ASR"
-    }
+    },
+    
 ]
 
 const Search = styled("div")(({ theme }) => ({
@@ -102,7 +122,13 @@ const FlightBar = () => {
     const [currentFlight, setFlightDate] = useState(0)
     const handleFlight = ((direction) => {
         setFlightDate((currentState) => {
-            
+            if (direction === 'right') 
+                if (currentState + 1 === flights.length)
+                    return 0 
+                else return currentState + 1
+            if (currentState - 1 < 0)
+                return flights.length() - 1
+            return currentState - 1
         })
     })
     return (
@@ -128,7 +154,7 @@ const FlightBar = () => {
                     alignItems: 'center', 
                     width: "100%"
                 }}>
-                    <IconButton aria-label="delete">
+                    <IconButton aria-label="delete" onClick={() => {handleFlight('left')}}>
                         <KeyboardArrowLeftRoundedIcon />
                     </IconButton>
                     <Typography
@@ -141,7 +167,7 @@ const FlightBar = () => {
                         + months[flights[currentFlight].date.month] + ", " 
                         + " Сб, " + flights[currentFlight].number}
                     </Typography>
-                    <IconButton aria-label="delete">
+                    <IconButton aria-label="delete" onClick={() => {handleFlight('right')}}>
                         <KeyboardArrowRightRoundedIcon />
                     </IconButton>
                 </div>
@@ -155,7 +181,7 @@ const FlightBar = () => {
                     />
                 </Search>
             </div>
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
+            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}} key={flights[currentFlight].id}>
                 <div className='flightBarItem'>
                     <div className='topleft'>Вылет</div>
                     <div className='topright'><FlightTakeoffIcon style={{transform: "scale(1)"}}/></div>

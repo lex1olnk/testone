@@ -2,6 +2,7 @@ html, body, #root {
   width: 100%;
   height: 100%;
   background-color: #EBEFF8;
+  font-weight: 500;
 }
 
 a {
@@ -24,6 +25,10 @@ a {
 
 .navBar ul li a{
   color: black;
+}
+
+.navBar ul li a:hover{
+  color: #6A69A5;
 }
 
 .header {
@@ -79,3 +84,23 @@ a {
   bottom: 0;
   right: 0;
 }
+
+tr {
+  background-color: #F3F6FD;
+}
+td, th {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+tr td:first-child { border-top-left-radius: 5px; }
+tr td:last-child { border-top-right-radius: 5px; }
+
+tr td:first-child { border-bottom-left-radius: 5px; }
+tr td:last-child { border-bottom-right-radius: 5px; }
+
+tr th:first-child { border-top-left-radius: 5px; }
+tr th:last-child { border-top-right-radius: 5px; }
+
+tr th:first-child { border-bottom-left-radius: 5px; }
+tr th:last-child { border-bottom-right-radius: 5px; }
