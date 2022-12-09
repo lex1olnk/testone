@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/testone/static/css/main.882548a1.css",
-    "main.js": "/testone/static/js/main.16910306.js",
+    "main.css": "/testone/static/css/main.949f3c4b.css",
+    "main.js": "/testone/static/js/main.1e3376b3.js",
     "static/js/787.8a1176e8.chunk.js": "/testone/static/js/787.8a1176e8.chunk.js",
     "index.html": "/testone/index.html",
-    "main.882548a1.css.map": "/testone/static/css/main.882548a1.css.map",
-    "main.16910306.js.map": "/testone/static/js/main.16910306.js.map",
+    "main.949f3c4b.css.map": "/testone/static/css/main.949f3c4b.css.map",
+    "main.1e3376b3.js.map": "/testone/static/js/main.1e3376b3.js.map",
     "787.8a1176e8.chunk.js.map": "/testone/static/js/787.8a1176e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.882548a1.css",
-    "static/js/main.16910306.js"
+    "static/css/main.949f3c4b.css",
+    "static/js/main.1e3376b3.js"
   ]
 }
