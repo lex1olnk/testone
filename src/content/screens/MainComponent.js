@@ -19,12 +19,7 @@ const MainComponent = () => {
 
     return(
         <div>
-            <div className='container' style={{
-                    display: 'flex',
-                    height: "100vh",
-                    flexDirection: 'column',
-                    justifyContent: 'space-between'
-                }}>
+            <div className='h-screen w-11/12 m-auto flex flex-col justify-between'>
                 <HeaderComponent />
                 <FlightBar />    
                 <div style={{

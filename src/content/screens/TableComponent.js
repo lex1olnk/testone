@@ -87,44 +87,20 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 const TableComponent = () => {
 
     return (
-        <div style={{
-            aspectRatio: 2.4, 
-            height: 400,
-            width: 960,
-            marginBottom: 50,
-            borderRadius: 10,
-            background: 'white',
-            padding: 20,
-        }}>
-            <div style={{
-                height: 50,
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-            }}>
+        <div className="w-fit bg-white p-3 rounded-lg mb-20">
+            <div className="flex flex-row h-20 align-center ">
                 {texts.map((txt) => {
                     return (        
-                        <div key={txt} style={{
-                            display: 'flex', 
-                            flexDirection: 'row', 
-                            alignItems: 'center'
-                        }}>
+                        <div key={txt} className="flex flex-row my-auto">
                             <Typography
                                 variant="h8"
                                 noWrap
                                 component="div"
-                                sx={{ display: { xs: "none", sm: "block", margin: "0 15px" } }}
+                                sx={{ display: { xs: "none", sm: "block", margin: "auto 1em" } }}
                             >
                                 {txt}
                             </Typography>
-                            <div style={{
-                                display: 'inline-block',
-                                width: .2,
-                                height: "30px",
-                                background: "#AAA",
-                                border: "1px solid #ddd"
-                            }}>
-                                
+                            <div className="inline-block w-px h-8 bg-gray-300">
                             </div>
                         </div>        
 
@@ -134,37 +110,30 @@ const TableComponent = () => {
                     variant="h8"
                     noWrap
                     component="div"
-                    sx={{ display: { xs: "none", sm: "block", margin: "0 15px" } }}
+                    sx={{ display: { xs: "none", sm: "block", margin: "auto 1em" } }}
                 >
                     БР2
                 </Typography>
                 <BorderLinearProgress 
                     variant="determinate" 
                     value={20} 
-                    sx={{
-                        height: "8px", 
-                        width: "50px", 
-                        borderRadius: 1}
-                }/>
+                    className="w-8 my-auto rounded-1em"
+                />
                 <Typography
                     variant="h8"
                     noWrap
                     component="div"
-                    sx={{ display: { xs: "none", sm: "block", margin: "0 15px" } }}
+                    sx={{ display: { xs: "none", sm: "block", margin: "auto 1em" } }}
                 >
                     БР2
                 </Typography>
             </div>
-            <table className="table" style={{borderSpacing: "0 5px"}}>
+            <table className="border-spacing-2">
                 <thead>
                     <tr>
                     {rows.map(row => { 
                         return(
-                            <th 
-                                style={{color: '#565194'}}
-                                key={row} 
-                                scope="col"
-                            >
+                            <th className=" text-violet-700" key={row} scope="col">
                                 {row}
                             </th>
                         )
@@ -175,7 +144,7 @@ const TableComponent = () => {
                     {data.map(item => {
                         return (
                             <tr key={item.id}>
-                                <td className="">
+                                <td>
                                     {item.kb}
                                 </td>
                                 <td>
@@ -197,7 +166,7 @@ const TableComponent = () => {
                                     {item.min}
                                 </td>
                                 <td>
-                                    {item.ls ? <CheckRoundedIcon sx={{color: "#565194"}}/> : null}
+                                    {item.ls ? <CheckRoundedIcon className="text-violet-700" /> : null}
                                 </td>
                                 <td>
                                     {item.sb}

@@ -8,6 +8,7 @@ import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import FlightLandRoundedIcon from '@mui/icons-material/FlightLandRounded';
 import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
 import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
+import styles from '../styles/App.module.scss'
 
 const months = {
     0: "января",
@@ -78,32 +79,6 @@ const flights = [
     
 ]
 
-const Search = styled("div")(({ theme }) => ({
-    position: "relative",
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha("#AAA", 0.15),
-    "&:hover": {
-      backgroundColor: alpha("#F3F6FD", 1)
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: theme.spacing(3),
-      width: "auto"
-    }
-  }));
-  
-const SearchIconWrapper = styled("div")(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: "100%",
-    position: "absolute",
-    pointerEvents: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center"
-}));
-
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: "inherit",
     "& .MuiInputBase-input": {
@@ -132,79 +107,55 @@ const FlightBar = () => {
         })
     })
     return (
-        <div style={{
-            display: 'flex',
-            width: "665px",
-            aspectRatio: 4.33,
-            background: "white",
-            borderRadius: "15px",
-            padding: "10px",
-            flexDirection: 'column',
-            justifyContent: 'space-between'
-        }}>
-            <div style={{
-                display: 'flex', 
-                flexDirection: 'row', 
-                justifyContent: "space-between", 
-                alignItems: 'center',
-            }}>
-                <div style={{
-                    display: 'flex', 
-                    flexDirection: 'row', 
-                    alignItems: 'center', 
-                    width: "100%"
-                }}>
+        <div className={styles.flBar} >
+            <div className='flex justify-between h-24 align-center'>
+                <div className="flex flex-row justify-between h-fit my-auto w-64">
                     <IconButton aria-label="delete" onClick={() => {handleFlight('left')}}>
                         <KeyboardArrowLeftRoundedIcon />
                     </IconButton>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="div"
-                        sx={{ display: { xs: "none", sm: "block" } }}
-                    >
+                    <p className="my-auto text-lg">
                         {flights[currentFlight].date.day + " " 
                         + months[flights[currentFlight].date.month] + ", " 
                         + " Сб, " + flights[currentFlight].number}
-                    </Typography>
+                    </p>
                     <IconButton aria-label="delete" onClick={() => {handleFlight('right')}}>
                         <KeyboardArrowRightRoundedIcon />
                     </IconButton>
                 </div>
-                <Search>
-                    <SearchIconWrapper>
+                <div className="h-fit my-auto bg-gray-100 rounded-md">
+                    <div className='h-fit absolute flex justify-center align-center p-2 px-3'>
                         <SearchIcon />
-                    </SearchIconWrapper>
+                    </div>
                     <StyledInputBase
-                    placeholder="Поиск"
-                    inputProps={{ "aria-label": "search" }}
+                        placeholder="Поиск"
+                        inputProps={{ "aria-label": "search" }}
                     />
-                </Search>
+                </div>
             </div>
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}} key={flights[currentFlight].id}>
-                <div className='flightBarItem'>
-                    <div className='topleft'>Вылет</div>
-                    <div className='topright'><FlightTakeoffIcon style={{transform: "scale(1)"}}/></div>
-                    <div className='bottomleft'>{flights[currentFlight].from.place}</div>
-                    <div className='bottomright'>{flights[currentFlight].from.time.hour + ':' + flights[currentFlight].from.time.minutes}</div>
+            <div className='flex flex-row justify-between'/*style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}*/ key={flights[currentFlight].id}>
+                <div className={styles.fBarItem}>
+                    <div>Вылет</div>
+                    <div>{flights[currentFlight].from.place}</div>
+                    <div><FlightTakeoffIcon /></div>
+                    <div>{flights[currentFlight].from.time.hour + ':' + flights[currentFlight].from.time.minutes}</div>
                 </div>
-                <div className='flightBarItem'>
-                    <div className='topleft'>Прилет</div>
-                    <div className='topright'><FlightLandRoundedIcon style={{transform: "scale(1)"}}/></div>
-                    <div className='bottomleft'>{flights[currentFlight].to.place}</div>
-                    <div className='bottomright'>{flights[currentFlight].to.time.hour + ':' + flights[currentFlight].to.time.minutes}</div>
+                <div className={styles.fBarItem}>
+                    <div>Прилет</div>
+                    <div>{flights[currentFlight].to.place}</div>
+                    <div><FlightLandRoundedIcon /></div>
+                    <div>{flights[currentFlight].to.time.hour + ':' + flights[currentFlight].to.time.minutes}</div>
                 </div>
-                <div className='flightBarItem'>
-                    <div className='topleft'>Тип ВС</div>
-                    <div className='bottomleft'>{flights[currentFlight].typeAC}</div>
+                <div className={styles.fBarItem}>
+                    <div>Тип ВС</div>
+                    <div>{flights[currentFlight].typeAC}</div>
                 </div>
-                <div className='flightBarItem'>
-                    <div className='topleft'>Статус</div>
-                    <div className='bottomleft'>{flights[currentFlight].status}</div>
+                <div className={styles.fBarItem}>
+                    <div>Статус</div>
+                    <div>{flights[currentFlight].status}</div>
                 </div>
-                <div className='flightBarItem'>
-                    <div className='topleft'>Бизнес-правило</div>
-                    <div className='bottomleft'>{flights[currentFlight].rule}</div>
+                <div className={styles.fBarItem}>
+                    <div>Бизнес-правило</div>
+                    <div>{flights[currentFlight].rule}</div>
                 </div>
             </div>
         </div>
