@@ -13,7 +13,7 @@ const BasicSelect = (props) => {
     };
   
     return (
-      <Box sx={{ height: 55, width: '250px', backgroundColor: "#fff"}}>
+      <Box className="w-64 h-fit bg-white">
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">{props.name}</InputLabel>
           <Select

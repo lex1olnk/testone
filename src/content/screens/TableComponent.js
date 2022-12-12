@@ -88,7 +88,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 const TableComponent = () => {
 
     return (
-        <div className="w-fit bg-white p-3 rounded-lg mb-20">
+        <div className="w-fit bg-white p-3 rounded-lg h-2/5 mb-20">
             <div className="flex flex-row h-20 align-center ">
                 {texts.map((txt) => {
                     return (        

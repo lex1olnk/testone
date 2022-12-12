@@ -19443,27 +19443,6 @@ function r(e){var t,f,n="";if("string"==typeof e||"number"==typeof e)n+=e;else i
 
 /***/ }),
 
-/***/ "./src/content/styles/App.module.scss":
-/*!********************************************!*\
-  !*** ./src/content/styles/App.module.scss ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "fBarItem": () => (/* binding */ fBarItem),
-/* harmony export */   "flBar": () => (/* binding */ flBar),
-/* harmony export */   "kek": () => (/* binding */ kek)
-/* harmony export */ });
-// Exports
-var kek = "App-module--kek--f9b98";
-var fBarItem = "App-module--fBarItem--b7726";
-var flBar = "App-module--flBar--d855a";
-
-
-/***/ }),
-
 /***/ "./src/content/screens/BasicSelect.js":
 /*!********************************************!*\
   !*** ./src/content/screens/BasicSelect.js ***!
@@ -19537,16 +19516,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _mui_material_IconButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material/IconButton */ "./node_modules/@mui/material/esm/IconButton/IconButton.js");
-/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/esm/styles/styled.js");
-/* harmony import */ var _mui_material_InputBase__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material/InputBase */ "./node_modules/@mui/material/esm/InputBase/InputBase.js");
-/* harmony import */ var _mui_icons_material_Search__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/icons-material/Search */ "./node_modules/@mui/icons-material/Search.js");
-/* harmony import */ var _mui_icons_material_FlightTakeoff__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/icons-material/FlightTakeoff */ "./node_modules/@mui/icons-material/FlightTakeoff.js");
-/* harmony import */ var _mui_icons_material_FlightLandRounded__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/icons-material/FlightLandRounded */ "./node_modules/@mui/icons-material/FlightLandRounded.js");
-/* harmony import */ var _mui_icons_material_KeyboardArrowLeftRounded__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/icons-material/KeyboardArrowLeftRounded */ "./node_modules/@mui/icons-material/KeyboardArrowLeftRounded.js");
-/* harmony import */ var _mui_icons_material_KeyboardArrowRightRounded__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/icons-material/KeyboardArrowRightRounded */ "./node_modules/@mui/icons-material/KeyboardArrowRightRounded.js");
-/* harmony import */ var _styles_App_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/App.module.scss */ "./src/content/styles/App.module.scss");
-
+/* harmony import */ var _mui_material_IconButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material/IconButton */ "./node_modules/@mui/material/esm/IconButton/IconButton.js");
+/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/esm/styles/styled.js");
+/* harmony import */ var _mui_material_InputBase__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/material/InputBase */ "./node_modules/@mui/material/esm/InputBase/InputBase.js");
+/* harmony import */ var _mui_icons_material_Search__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/icons-material/Search */ "./node_modules/@mui/icons-material/Search.js");
+/* harmony import */ var _mui_icons_material_FlightTakeoff__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/icons-material/FlightTakeoff */ "./node_modules/@mui/icons-material/FlightTakeoff.js");
+/* harmony import */ var _mui_icons_material_FlightLandRounded__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/icons-material/FlightLandRounded */ "./node_modules/@mui/icons-material/FlightLandRounded.js");
+/* harmony import */ var _mui_icons_material_KeyboardArrowLeftRounded__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/icons-material/KeyboardArrowLeftRounded */ "./node_modules/@mui/icons-material/KeyboardArrowLeftRounded.js");
+/* harmony import */ var _mui_icons_material_KeyboardArrowRightRounded__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/icons-material/KeyboardArrowRightRounded */ "./node_modules/@mui/icons-material/KeyboardArrowRightRounded.js");
 
 
 
@@ -19620,7 +19597,7 @@ const flights = [{
   status: "Открыт",
   rule: "ASR"
 }];
-const StyledInputBase = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_2__["default"])(_mui_material_InputBase__WEBPACK_IMPORTED_MODULE_3__["default"])(({
+const StyledInputBase = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_1__["default"])(_mui_material_InputBase__WEBPACK_IMPORTED_MODULE_2__["default"])(({
   theme
 }) => ({
   color: "inherit",
@@ -19648,28 +19625,28 @@ const FlightBar = () => {
     });
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _styles_App_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].flBar
+    className: "flex rounded-md p-2 bg-white w-2/4 h-1/5 flex-col"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "flex justify-between h-24 align-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "flex flex-row justify-between h-fit my-auto w-64"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
     "aria-label": "delete",
     onClick: () => {
       handleFlight('left');
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_KeyboardArrowLeftRounded__WEBPACK_IMPORTED_MODULE_5__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_KeyboardArrowLeftRounded__WEBPACK_IMPORTED_MODULE_4__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "my-auto text-lg"
-  }, flights[currentFlight].date.day + " " + months[flights[currentFlight].date.month] + ", " + " Сб, " + flights[currentFlight].number), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, flights[currentFlight].date.day + " " + months[flights[currentFlight].date.month] + ", " + " Сб, " + flights[currentFlight].number), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
     "aria-label": "delete",
     onClick: () => {
       handleFlight('right');
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_KeyboardArrowRightRounded__WEBPACK_IMPORTED_MODULE_6__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_KeyboardArrowRightRounded__WEBPACK_IMPORTED_MODULE_5__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "h-fit my-auto bg-gray-100 rounded-md"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "h-fit absolute flex justify-center align-center p-2 px-3"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Search__WEBPACK_IMPORTED_MODULE_7__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledInputBase, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Search__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledInputBase, {
     placeholder: "\u041F\u043E\u0438\u0441\u043A",
     inputProps: {
       "aria-label": "search"
@@ -19678,15 +19655,15 @@ const FlightBar = () => {
     className: "flex flex-row justify-between" /*style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}*/,
     key: flights[currentFlight].id
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _styles_App_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].fBarItem
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "\u0412\u044B\u043B\u0435\u0442"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, flights[currentFlight].from.place), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_FlightTakeoff__WEBPACK_IMPORTED_MODULE_8__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, flights[currentFlight].from.time.hour + ':' + flights[currentFlight].from.time.minutes)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _styles_App_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].fBarItem
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "\u041F\u0440\u0438\u043B\u0435\u0442"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, flights[currentFlight].to.place), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_FlightLandRounded__WEBPACK_IMPORTED_MODULE_9__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, flights[currentFlight].to.time.hour + ':' + flights[currentFlight].to.time.minutes)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _styles_App_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].fBarItem
+    className: "fBarItem"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "\u0412\u044B\u043B\u0435\u0442"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, flights[currentFlight].from.place), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_FlightTakeoff__WEBPACK_IMPORTED_MODULE_7__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, flights[currentFlight].from.time.hour + ':' + flights[currentFlight].from.time.minutes)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "fBarItem"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "\u041F\u0440\u0438\u043B\u0435\u0442"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, flights[currentFlight].to.place), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_FlightLandRounded__WEBPACK_IMPORTED_MODULE_8__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, flights[currentFlight].to.time.hour + ':' + flights[currentFlight].to.time.minutes)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "fBarItem"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "\u0422\u0438\u043F \u0412\u0421"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, flights[currentFlight].typeAC)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _styles_App_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].fBarItem
+    className: "fBarItem"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "\u0421\u0442\u0430\u0442\u0443\u0441"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, flights[currentFlight].status)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _styles_App_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].fBarItem
+    className: "fBarItem"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "\u0411\u0438\u0437\u043D\u0435\u0441-\u043F\u0440\u0430\u0432\u0438\u043B\u043E"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, flights[currentFlight].rule))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FlightBar);
@@ -19743,6 +19720,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HeaderComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./HeaderComponent */ "./src/content/screens/HeaderComponent.js");
 /* harmony import */ var _BasicSelect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./BasicSelect */ "./src/content/screens/BasicSelect.js");
 /* harmony import */ var _TableComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./TableComponent */ "./src/content/screens/TableComponent.js");
+/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../styles/global.css */ "./src/styles/global.css");
+/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -19756,15 +19736,12 @@ const sales = [{
   value: 1
 }];
 const MainComponent = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "bg-blue-50"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "h-screen w-11/12 m-auto flex flex-col justify-between"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_HeaderComponent__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_FlightBar__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    style: {
-      width: "800px",
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'space-between'
-    }
+    className: "w-6/12 h-1/12 flex flex-row justify-between"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_BasicSelect__WEBPACK_IMPORTED_MODULE_3__["default"], {
     data: sales,
     name: "\u0412\u044B\u0440\u0443\u0447\u043A\u0430 \u043F\u043B\u0430\u043D\u043E\u0432\u0430\u044F"
@@ -19876,7 +19853,7 @@ const BorderLinearProgress = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_1_
 }));
 const TableComponent = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "w-fit bg-white p-3 rounded-lg mb-20"
+    className: "w-fit bg-white p-3 rounded-lg h-2/5 mb-20"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "flex flex-row h-20 align-center "
   }, texts.map(txt => {
