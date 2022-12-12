@@ -1,3 +1,4 @@
+import React from 'react';
 import Typography from "@mui/material/Typography";
 import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
@@ -133,7 +134,7 @@ const TableComponent = () => {
                     <tr>
                     {rows.map(row => { 
                         return(
-                            <th className=" text-violet-700" key={row} scope="col">
+                            <th className="text-violet-700" key={row} scope="col">
                                 {row}
                             </th>
                         )

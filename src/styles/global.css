@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+td, th {
+    @apply px-4 py-1.5 w-full text-center;
+}
+
+tr td:last-child, th:last-child {
+    @apply rounded-r-lg;
+}
+
+tr td:first-child, th:first-child {
+    @apply rounded-l-lg;
+}
+
+tr {
+    @apply bg-blue-50 border-y-8 border-white;
+  
+    &:first-child {
+        @apply border-t-0;
+    }
+}
+.kek {
+    @apply m-10
+}
+
+.fBarItem{
+    @apply bg-blue-50 border-indigo-50 border-8 h-24 mx-1 rounded-md relative w-1/5;
+}
+
+.fBarItem div {
+    @apply absolute right-0 even:bottom-0 odd:top-0;
+}
+
+.fBarItem div:nth-of-type(-n + 2)  {
+    @apply left-0;
+}    

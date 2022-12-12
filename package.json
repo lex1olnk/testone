@@ -12,6 +12,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "gatsby": "^5.2.0",
+    "gatsby-plugin-postcss": "^6.2.0",
+    "gatsby-plugin-sass": "^6.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -22,9 +24,12 @@
     "predeploy": "npm run build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:css": "postcss src/layouts/index.css -o src/layouts/generated.css",
+    "watch:css": "postcss src/layouts/index.css -o src/layouts/generated.css -w",
+    "build": "npm run build:css && gatsby build",
+    "develop": "npm run watch:css & gatsby develop"
   },
   "eslintConfig": {
     "extends": [

@@ -8,7 +8,6 @@ import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import FlightLandRoundedIcon from '@mui/icons-material/FlightLandRounded';
 import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
 import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
-import styles from '../styles/App.module.scss'
 
 const months = {
     0: "января",
@@ -107,7 +106,7 @@ const FlightBar = () => {
         })
     })
     return (
-        <div className={styles.flBar} >
+        <div className="flex rounded-md p-2 bg-white w-2/4 h-1/5 flex-col" >
             <div className='flex justify-between h-24 align-center'>
                 <div className="flex flex-row justify-between h-fit my-auto w-64">
                     <IconButton aria-label="delete" onClick={() => {handleFlight('left')}}>
@@ -133,27 +132,27 @@ const FlightBar = () => {
                 </div>
             </div>
             <div className='flex flex-row justify-between'/*style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}*/ key={flights[currentFlight].id}>
-                <div className={styles.fBarItem}>
+                <div className="fBarItem">
                     <div>Вылет</div>
                     <div>{flights[currentFlight].from.place}</div>
                     <div><FlightTakeoffIcon /></div>
                     <div>{flights[currentFlight].from.time.hour + ':' + flights[currentFlight].from.time.minutes}</div>
                 </div>
-                <div className={styles.fBarItem}>
+                <div className="fBarItem">
                     <div>Прилет</div>
                     <div>{flights[currentFlight].to.place}</div>
                     <div><FlightLandRoundedIcon /></div>
                     <div>{flights[currentFlight].to.time.hour + ':' + flights[currentFlight].to.time.minutes}</div>
                 </div>
-                <div className={styles.fBarItem}>
+                <div className="fBarItem">
                     <div>Тип ВС</div>
                     <div>{flights[currentFlight].typeAC}</div>
                 </div>
-                <div className={styles.fBarItem}>
+                <div className="fBarItem">
                     <div>Статус</div>
                     <div>{flights[currentFlight].status}</div>
                 </div>
-                <div className={styles.fBarItem}>
+                <div className="fBarItem">
                     <div>Бизнес-правило</div>
                     <div>{flights[currentFlight].rule}</div>
                 </div>
